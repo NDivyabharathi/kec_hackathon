@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<head>
+    <title>Serenity</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .navbar {
+        position: fixed;
+        background: rgba(210, 180, 140, 0.4);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(5px);
+      }
+      .platform-name {
+          font-size: 24px; 
+          font-weight: bold;
+          font-family: "Dancing Script", cursive; 
+          color: #511a0b; 
+      }
+      .navbar-brand img{
+          width: 60px;
+          height: 60px; 
+          object-fit: cover;
+      }
+      .navbar-nav .nav-link {
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: bold;
+      }
+      .navbar-nav .nav-link-active {
+        color: #D2691E;
+        font-weight: bold;
+      }
+      .d-block{
+        max-height: 500px;
+        object-fit: cover;
+      }
+      .about-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1100px;
+        margin: 50px auto;
+        padding: 30px;
+        font-family: 'Georgia', serif;
+        background: rgba(255, 230, 218,0.3);
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    .about-text, .join-movement {
+        flex: 1;
+        padding: 20px;
+    }
+    .about-text {
+        border-right: 2px solid #D2691E;
+    }
+    .join-movement {
+        text-align: center;
+    }
+    .about-text h2, .join-movement h3 {
+        font-size: 24px;
+        color: #8B4513;
+        margin-bottom: 15px;
+    }
+    .about-text p, .join-movement p {
+        font-size: 18px;
+        color: #333;
+        line-height: 1.6;
+    }
+    .highlights {
+        font-weight: bold;
+        font-size: 16px;
+        color: #444;
+        margin-top: 10px;
+    }
+    .shop-btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 12px 20px;
+        background: #8B4513;
+        color: white;
+        font-size: 18px;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: 0.3s ease-in-out;
+    }
+    .shop-btn:hover {
+        background: #A0522D;
+    }
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about-text {
+        border-right: none;
+        border-bottom: 2px solid #D2691E;
+        padding-bottom: 20px;
+      }
+    }
+    .footer {
+    background: #8B4513; 
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    }
+    .footer-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-section {
+      flex: 1;
+      min-width: 250px;
+      margin: 10px;
+    }
+    .footer-section h3 {
+      border-bottom: 2px solid white;
+      padding-bottom: 5px;
+    }
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-section a {
+      color: white;
+      text-decoration: none;
+    }
+    .btn {
+      background: #8B4513;
+      color: black;
+      padding: 8px 15px;
+      border-radius: 5px;
+      border-color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .btn:hover{
+      background: #A0522D;
+    }
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+    .new-arrivals {
+      font-family: Lucida Handwriting;
+      background-color: rgba(255, 230, 218,1); 
+      padding: 50px 0;
+    }
+    .card {
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .card-title {
+        color: #8B4513; 
+    }
+    .card-img-top {
+      height: 250px;
+      object-fit: cover;
+      width: 100%;
+    }
+    .btn-primary {
+        background-color: #D2691E; 
+        border: none;
+    }
+    .btn-primary:hover {
+        background-color: #A0522D;
+    }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    <nav class="navbar navbar-expand-sm justify-content-left fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="lg.png" alt="Logo" class="rounded-pill">
+                <span class="platform-name">Nila</span>
+            </a>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Shop now</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Signup</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="c1.jpg" alt="Los Angeles" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="c2.jpg" alt="Chicago" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="c3.jpg" alt="New York" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="c4.jpg" alt="New York" class="d-block w-100">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+      <div class="about-container">
+        <div class="about-text">
+            <h2> Where Tradition Meets Innovation </h2>
+            <p>
+                India is a land of stories—woven in silk, carved in wood, molded in clay, and etched in metal. 
+                Every handicraft carries within it the whispers of generations, the rhythm of hands that have shaped heritage, 
+                and the soul of a culture that thrives in artistry.
+            </p>
+            <p>
+                At <strong>Nila</strong>, we are more than just an eCommerce platform—we are a bridge between rural artisans of India and the world. 
+                Our mission is to bring you handcrafted treasures, made with passion and tradition, 
+                straight from the skilled hands of artisans across villages and small towns.
+            </p>
+        </div>
+        <div class="join-movement">
+            <h3>Join Our Movement</h3>
+            <p>
+                When you shop at <strong>Nila</strong>, you are not just buying a product;
+                you are becoming a patron of India's timeless art. Together, we can ensure that our artisans thrive, 
+                our traditions endure, and the world rediscovers the magic of Indian craftsmanship.
+            </p>
+            <p class="highlights">
+               Handcrafted with Love |  Supporting Rural Communities
+            </p>
+            <a href="#" class="shop-btn"> Shop Now</a>
+        </div>
+    </div>
+    <section class="new-arrivals py-5">
+      <div class="container">
+          <h2 class="text-center mb-4"> New Arrivals </h2>
+          <div class="row">
+              <div class="col-md-4 mb-4">
+                  <div class="card">
+                      <img src="na1.jpg" class="card-img-top" alt="Handicraft Item 1">
+                      <div class="card-body">
+                          <h5 class="card-title">Handwoven Basket</h5>
+                          <p class="card-text">A beautifully handcrafted basket made from natural fibers.</p>
+                          <a href="#" class="btn btn-primary">Shop Now</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                  <div class="card">
+                      <img src="na2.jpg" class="card-img-top" alt="Handicraft Item 2">
+                      <div class="card-body">
+                          <h5 class="card-title">Terracotta Vase</h5>
+                          <p class="card-text">Elegant terracotta jewellery set crafted with intricate designs.</p>
+                          <a href="#" class="btn btn-primary">Shop Now</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                  <div class="card">
+                      <img src="na3.png" class="card-img-top" alt="Handicraft Item 3">
+                      <div class="card-body">
+                          <h5 class="card-title">Block Printed Scarf</h5>
+                          <p class="card-text">Traditional hand-block printed scarf, soft and stylish.</p>
+                          <a href="#" class="btn btn-primary">Shop Now</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section><br><br><br>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Shop Now</h3>
+          <ul>
+            <li><a href="#">Apparels</a></li>
+            <li><a href="#">Home Decor</a></li>
+            <li><a href="#">Accessories</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>Email: support@yourbrand.com</p>
+          <p>Phone: +91 98765 43210</p>
+          <p>Location: India</p>
+        </div>
+        <div class="footer-section">
+          <h3>Signup/Login</h3>
+          <a href="#" class="btn">Join Us</a>
+        </div>
+      </div>
+    </footer>
+</body>
